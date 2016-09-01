@@ -1,0 +1,12 @@
+#+TITLE: Human robot handovers
+#+AUTHOR: Axel Demborg & Elon Såndberg
+
+
+* Data
+Motion capture data on human to human handovers was captured in the PMI-lab. The participants each had a marker mounted to their right hands and multiple handovers where performed.
+
+** Geometries
+For each pair four different geometries for the handovers were tested, to do this a point on the right of each participant was marked and called *B* and a point to the left of the participants was named *A*. [[./figures/setup.jpg]] The data files are named as follows "{Giver Name}{Receiver Name}{Giver start point}{Receiver start point}{Number}.csv" where the number only is relevant for the *AA* handovers since they were performed twice, as the first and the last series for each pair. For example "AnneliBengtAA1.csv" is the first series where Anneli hands over to Bengt, both of them starting at their respective points *A*. Each data set contains 27 handovers.
+
+* Extraction
+The markers are unlabeled but since there are so few of them (two) and we know approximately where the different subjects stood during the experiment, extraction of Giver and Receiver trajectories is quite trivial. Sample matlab code that does this can be found in the Code directory. 
